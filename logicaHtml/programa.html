@@ -1,24 +1,30 @@
 <meta charset="UTF-8">
 
 <script>
+//função sem parâmetro
+    function pulaLinha() {
 
-    function pulaLinha(){
-        
         document.write("<br>");
         document.write("<br>");
     }
+//função com o uso de parâmetro
+    function mostra(frase) {
 
-    var ano = 2017;
+        document.write(frase);
+        pulaLinha();
 
-    document.write("Flávio tem " + (ano - 1977) + " anos");
+    }
     
-    pulaLinha();
-
-    document.write("Joaquim tem " + (ano - 1996) + " anos");
+    var ano = 2016;
     
-    pulaLinha();
+    mostra("Flávio tem " + (ano - 1977) + " anos");
+    
+    mostra("Joaquim tem " + (ano - 1996) + " anos");
+    
+    ano = 2017;
 
-    ano = 2018;
-    document.write("Barney tem " + (ano - 1976) + " anos");
+    mostra("Barney tem " + (ano - 1976) + " anos");
+
+    mostra("Oi, tudo bem?");
 
 </script>
