@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+//função sem parâmetro
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+//função com o uso de parâmetro
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+
+    }
+
+    function calculaImc(altura, peso) {
+
+        var imc = peso / (altura * altura);
+        mostra("O imc calculado é: " + imc);
+    }
+
+    var pesoHettore = 67;
+    var alturaHettore = 1.74;
+    calculaImc(alturaHettore, pesoHettore);
+
+    var pesoJean = 95;
+    var alturaJean = 1.73;
+    calculaImc(alturaJean, pesoJean);
+
+    calculaImc(1.79, 99);
+
+    </script>
