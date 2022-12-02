@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+//função sem parâmetro
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+//função com o uso de parâmetro
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+//lendo do teclado mas garantindo que a entrada de dados sera um número.
+    var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+    var empates = parseInt(prompt("Entre com o número de empates."));
+
+    var pontos = (vitorias * 3) + empates;
+
+    mostra("O pontos do seu time são " + pontos);
+
+</script>
