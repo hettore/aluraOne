@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+//função sem parâmetro
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+//função com o uso de parâmetro
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+
+    }
+var limite = parseInt(prompt("Entre com o ano limite: "))
+    var anoCopa = 1930;
+
+    while(anoCopa <= limite) {
+        mostra("Teva copa em " + anoCopa);
+        anoCopa += 4;
+    }
+
+    mostra("FIM");
+
+</script>
