@@ -6,22 +6,32 @@
 
 <script>
 
-var segredo = Math.round(Math.random() * 10 );
+//var segredo = Math.round(Math.random() * 10 );
+
+var segredos = [5,7,10,2,3];
 
 var input = document.querySelector("input");
 input.focus();
 
 function verifica() {
 
-    if (input.value == segredo) {
-        alert("Você ACERTOU!");
+    var achou = false;
+    for(var posicao = 0; posicao < segredos.length ; posicao++ ) {
+
+        if (input.value == segredos[posicao]) {
+            alert("Você ACERTOU!");
+            achou = true;
+            break;
+        }
     }
-    else {
-        alert("Você ERROU!!!");
+
+    if(achou == false) {
+        
+        alert("Você ERROU!");
     }
 
     input.value = "";
-    input.focus();
+    input.focus();    
 }
 
 var button = document.querySelector("button");
