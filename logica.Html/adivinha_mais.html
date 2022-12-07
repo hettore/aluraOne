@@ -8,7 +8,46 @@
 
 //var segredo = Math.round(Math.random() * 10 );
 
-var segredos = [5,7,10,2,3];
+function sorteia() {
+
+    return Math.round(Math.random() * 10 );
+}
+
+function sorteiaNumeros(quantidade) {
+
+    var segredos = [];
+
+    var numero = 1;
+
+    while(numero <= quantidade) {
+
+        var numeroAleatorio = sorteia();
+
+        if(numeroAleatorio !== 0) {
+
+            var achou = false;
+    
+            for(var posicao = 0; posicao < segredos.length; posicao++) {
+    
+                if (segredos[posicao] == numeroAleatorio) {
+                    achou = true;
+                    break;
+                }
+            }
+    
+            if(achou == false){
+                segredos.push(numeroAleatorio);
+                numero++;
+            }
+        }
+    }
+
+    return segredos;
+}
+
+var segredos = sorteiaNumeros(5);
+
+console.log(segredos);
 
 var input = document.querySelector("input");
 input.focus();
