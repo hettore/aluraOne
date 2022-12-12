@@ -16,8 +16,11 @@
         pincel.fillStyle = cores[indiceCorAtual];
         pincel.beginPath();
 
-        if(evento.shiftKey ) {
+        if(evento.shiftKey && raio + 10 <= 40) {
             raio = raio + 10;
+        }
+        else if(evento.altKey && raio - 5 >= 10 ) {
+            raio = raio - 5;
         }
 
         pincel.arc(x, y, raio, 0, 2 * 3.14); 
